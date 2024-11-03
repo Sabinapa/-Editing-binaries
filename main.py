@@ -14,6 +14,7 @@ def find_bit_sequence(data, search_string):
     indices = []
     pos = 0
     data_bits = ''.join(f"{byte:08b}" for byte in data) #byte to bit
+    print(data_bits)
 
     while pos <= len(data_bits) - searching_string_length:
         if data_bits[pos:pos + searching_string_length] == search_string:
@@ -26,6 +27,7 @@ def find_bit_sequence(data, search_string):
 
 def replace_bit_sequence(data, old_search_string, new_search_string):
     data_bits = ''.join(f"{byte:08b}" for byte in data)
+    print(data_bits)
 
     new_data_bits = data_bits.replace(old_search_string, new_search_string)
 
