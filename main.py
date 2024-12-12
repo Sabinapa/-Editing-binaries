@@ -53,6 +53,7 @@ def main():
     if mode == "f":
         search_string = sys.argv[4]
         positions = find_bit_sequence(data, search_string)
+        print("Iskalni niz", search_string)
         print("Izpis indeksov pojavitve (pozicije):", positions)
     elif mode == "fr":
         old_search_string = sys.argv[4]
